@@ -30,9 +30,13 @@ execute 'install mongo' do
   action :run
 end
 
-execute 'pip requirement install' do
-  user dev_owner
+execute 'pip bottle' do
   command "#{pip} install bottle"
+  action :run
+end
+
+execute 'pip pymongo' do
+  command "#{pip} install pymongo"
   action :run
 end
 Chef::Log.info("Python requirement")
