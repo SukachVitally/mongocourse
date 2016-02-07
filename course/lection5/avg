@@ -1,0 +1,9 @@
+use test
+db.zips.aggregate([
+    {$group:
+        {
+            _id: "$state",
+            population: {$avg: "$pop"}
+        }
+    }
+])

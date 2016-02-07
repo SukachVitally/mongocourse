@@ -1,0 +1,12 @@
+use test
+db.zips.aggregate([
+    {$project:
+        {
+            _id: 0,
+            city: {$toLower: "$city"},
+            pop:  "$pop",
+            state: "$state",
+            zip: "$_id"
+        }
+    }
+])
