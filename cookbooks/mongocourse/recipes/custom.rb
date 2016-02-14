@@ -39,4 +39,9 @@ execute 'pip pymongo' do
   command "#{pip} install pymongo"
   action :run
 end
+
+execute 'pip pymongo' do
+  command "pip install pymongo"
+  action :run
+end
 Chef::Log.info("Python requirement")

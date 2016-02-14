@@ -4,3 +4,5 @@ include_recipe 'python::virtualenv'
 
 package 'epel-release'
 package 'vim'
+package 'mc'
+package 'psmisc'
